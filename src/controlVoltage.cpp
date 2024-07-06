@@ -131,6 +131,7 @@ void controlVoltage::gate(int val) {
 void controlVoltage::timedGate(int gateLen) {
   _outVal = (1<<_bitDepth) - 1;
   _gateLen = gateLen;
+  _triggerTimer = millis();
   _state = 2;
 }
 
