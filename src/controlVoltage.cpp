@@ -173,7 +173,7 @@ void controlVoltage::cv(int val, int attack, int decay){
 }
 
 void controlVoltage::midi(byte _val){
-  byte val = _val<24 ? 24 : _val > 72 ? 72 : _val;
+  byte val = _val<24 ? 24 : _val > 83 ? 83 : _val;
   _prev = _outVal;
   _goal = (val-24) * (4000/48);
   _state = 3;
